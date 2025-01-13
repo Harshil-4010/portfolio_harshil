@@ -1,0 +1,76 @@
+.banner-section {
+  background: linear-gradient(90deg, #1b7744, #111111, #000000);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.my-img {
+  max-width: 350px;
+}
+.my-img img {
+  width: 100%;
+  height: 100%;
+}
+.ban-icon {
+  outline: 1px solid #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  position: relative;
+  top: 0;
+  color: var(--light-colo);
+  text-decoration: none;
+}
+.ban-icon:hover {
+  color: var(--primary-colo);
+  outline: 1px solid var(--primary-colo);
+}
+.bann-i {
+  font-size: 25px;
+}
+@media (max-width: 600px) {
+  .bann-i {
+    font-size: 15px;
+  }
+  .ban-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .bann-i {
+    font-size: 20px;
+  }
+  .ban-icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media (max-width: 600px) {
+  .my-img {
+    max-width: 260px;
+    margin-bottom: 25px;
+  }
+  .my-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .ban-flx {
+    flex-direction: column-reverse;
+  }
+}

@@ -1,0 +1,55 @@
+.intro-img {
+  max-width: 300px;
+}
+.intro-img img {
+  width: 100%;
+  height: 100%;
+}
+.skills-services-table {
+  padding: 20px;
+  background-color: var(--primary-colo); /* Optional background color */
+  border-radius: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  color: var(--light-colo);
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--light-colo); /* Border color */
+  padding: 10px 15px;
+  text-align: left;
+  background-color: var(--dark-colo);
+  color: var(--light-colo);
+}
+.thead-table {
+  background-color: var(--primary-colo);
+}
+.table th {
+  background-color: var(#c8c6c6); /* Header background color */
+  color: var(--primary-colo); /* Header text color */
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: var(--primary-colo); /* Alternating row color */
+}
+
+.table tbody tr:hover {
+  background-color: var(#fff); /* Row hover effect */
+}
+@media (max-width: 600px) {
+  .intro-img {
+    max-width: 260px;
+  }
+  .intro-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .abt-txt {
+    margin-top: 20px;
+  }
+}

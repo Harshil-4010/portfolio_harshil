@@ -1,0 +1,156 @@
+.resum-heding {
+  text-align: center;
+}
+.resume-site {
+  padding: 20px 0;
+  position: relative;
+}
+.resume-site::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: var(--primary-colo);
+}
+.edu-inner.left::after {
+  content: "";
+  position: absolute;
+  top: 125px;
+  bottom: 0;
+  right: 0px;
+  height: 1px;
+  width: 30px;
+  background: var(--primary-colo);
+}
+.edu-inner.right::after {
+  content: "";
+  position: absolute;
+  top: 125px;
+  bottom: 0;
+  left: 0px;
+  height: 1px;
+  width: 30px;
+  background: var(--primary-colo);
+}
+.edu-inner {
+  position: relative;
+  width: 50%;
+  padding: 20px 30px;
+}
+.edu-inner.left {
+  left: 0;
+}
+.edu-inner.right {
+  left: 50%;
+}
+.content {
+  position: relative;
+  padding: 15px;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(82, 81, 81, 0.12) 0px -12px 30px, rgba(123, 121, 121, 0.12) 0px 4px 6px,
+    rgba(112, 109, 109, 0.17) 0px 12px 13px,
+    rgba(125, 124, 124, 0.09) 0px -3px 5px;
+}
+.content:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.35)  0px 5px 15px;
+}
+@media (max-width: 600px) {
+  .resume-site::before {
+    left: 5%;
+  }
+  .edu-inner {
+    width: 90%;
+    left: 5% !important;
+    margin-bottom: 20px;
+  }
+  .h2,
+  .h5 {
+    font-size: 50px;
+  }
+  .edu-inner.left::after {
+    content: "";
+    position: absolute;
+    top: 125px;
+    left: 0px;
+    bottom: 0;
+    right: 0px;
+    height: 1px;
+    width: 30px;
+    background: var(--primary-colo);
+  }
+  .resum-heding {
+    text-align: left;
+  }
+}
+.effect-1 {
+  -webkit-animation: rotate360 40s linear infinite;
+  animation: rotate360 10s linear infinite;
+  position: absolute;
+  right: 0%;
+  top: 100%;
+  bottom: 0%;
+  z-index: 1;
+}
+@keyframes rotate360 {
+  0% {
+    transform: rotate(10deg);
+    left: 1ch;
+  }
+  50% {
+    transform: rotate(90deg);
+    left: 20%;
+  }
+  75% {
+    transform: rotate(10deg);
+    left: 30%;
+  }
+  100% {
+    transform: rotate(90deg);
+    left: 40%;
+  }
+}
+
+.effect-2 {
+  -webkit-animation: rotate160 40s linear infinite;
+  animation: rotate160 10s linear infinite;
+  position: absolute;
+  right: 0%;
+  top: 100%;
+  bottom: 0%;
+  z-index: 1;
+}
+@keyframes rotate160 {
+  0% {
+    transform: rotate(10deg);
+    right: 1ch;
+  }
+  50% {
+    transform: rotate(90deg);
+    right: 20%;
+  }
+  75% {
+    transform: rotate(10deg);
+    right: 30%;
+  }
+  100% {
+    transform: rotate(90deg);
+    right: 40%;
+  }
+}
+@media (max-width: 600px) {
+  .effect-1,
+  .effect-2 {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .education-txt {
+    font-size: 20px;
+  }
+}

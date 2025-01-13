@@ -1,0 +1,100 @@
+/* slider css */
+/* Slider container */
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 15px 0;
+  box-shadow: 7px 4px 10px 1px rgb(0 0 0 / 27%);
+}
+
+/* Track for sliding elements */
+.slide-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: calc(100% * 1); /* Adjusted to show 5 slides at once */
+  animation: scroll 5s linear infinite;
+  animation-delay: 3s; /* Delay before scrolling starts */
+}
+
+/* Individual slide */
+.slide {
+  flex: 0 0 20%; /* Show 5 slides at a time */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Styling for the links */
+.languageiconlink {
+  text-decoration: none;
+  color: var(--light-colo);
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.languageiconlink:hover {
+  color: var(--primary-colo);
+}
+
+/* Icon styles */
+.languageiconmarquee {
+  font-size: 48px;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+
+.languageiconmarquee:hover {
+  transform: scale(1.2);
+}
+
+/* Keyframes for infinite scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -20%
+    ); /* Scroll 1 slide at a time (for seamless loop) */
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .slide {
+    flex: 0 0 20%; /* Show 5 slides at a time on medium screens */
+  }
+
+  .languageiconmarquee {
+    font-size: 40px; /* Adjust font size for smaller screens */
+  }
+}
+.lang-txt {
+  display: block;
+}
+@media (max-width: 768px) {
+  .slide {
+    flex: 0 0 20%; /* Show 5 slides at a time on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    flex: 0 0 20%; /* Show 5 slides at a time on very small screens */
+  }
+}
+
+@media (max-width: 320px) {
+  .slide {
+    flex: 0 0 20%; /* Show 5 slides at a time even on small screens */
+  }
+
+  .languageiconmarquee {
+    font-size: 30px; /* Adjust font size further to fit content */
+  }
+}
